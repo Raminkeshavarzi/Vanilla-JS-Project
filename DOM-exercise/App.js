@@ -115,3 +115,15 @@ const getScoreLine = ({ homeTeam, awayTeam }) => {
 	}
 	return `${teamNames} ${scoreLine}`;
 };
+
+//Select the 2 sections to append to (from index.html)
+const gsSection = document.querySelector('#gs');
+const houstonSection = document.querySelector('#hr');
+
+// Make the 2 charts:
+const gsChart = makeChart(warriorsGames, 'Golden State');
+const hrChart = makeChart(warriorsGames, 'Houston');
+
+//Append them!
+gsSection.appendChild(gsChart);
+houstonSection.appendChild(hrChart);
